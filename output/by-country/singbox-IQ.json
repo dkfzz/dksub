@@ -5,22 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇷 IR 01 - xiaohe",
-      "server": "62.60.152.1",
-      "server_port": 56328,
-      "uuid": "ce230b9c-0531-40da-bc3f-f27a8e059db1",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇮🇶 IQ 01 - xiaohe",
+      "server": "104.21.36.36",
+      "server_port": 443,
+      "uuid": "41750e18-7143-49a3-bdac-4edcb3c8b8f3",
       "tls": {
         "enabled": true,
-        "server_name": "table.vkroom-it-service.xyz",
+        "server_name": "h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M",
-          "short_id": "f3a9c21e8b6d4571"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/ml3Epzqnzr8r2cTPtolbD5lTi1GWsZOP?ed=2560",
+        "headers": {
+          "Host": "h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev"
         }
       }
     },
@@ -29,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇷 IR 01 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇷 IR 01 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
