@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  server: 104.21.98.146
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-48493148ec15
+  tls: true
+  servername: cgzdynepurqs.mercury061.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/48493148ec15fp=ios
+    headers:
+      Host: cgzdynepurqs.mercury061.workers.dev
+- name: 🇲🇾 马来西亚 (Malaysia) 02 - xiaohe
   server: platform128.golnamakcert.top
   port: 80
   udp: true
@@ -21,11 +35,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🇲🇾 马来西亚 (Malaysia) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🇲🇾 马来西亚 (Malaysia) 02 - xiaohe
 rules:
 - MATCH,PROXIES
