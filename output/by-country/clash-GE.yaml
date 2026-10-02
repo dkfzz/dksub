@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 104.24.2.147
+- name: 🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe
+  server: geo.shkola112.site
   port: 443
   udp: true
   type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
   tls: true
-  servername: a.cwvps.eu.org
+  servername: geo.shkola112.site
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws
+    path: /api-vless
     headers:
-      Host: a.cwvps.eu.org
+      Host: geo.shkola112.site
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe
 rules:
 - MATCH,PROXIES
