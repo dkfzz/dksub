@@ -5,16 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - xiaohe
-  server: 104.21.67.113
-  port: 443
+  server: 188.114.97.1
+  port: 2053
   udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: x0C3lq1A15ip-65Kc4-l1A1tx.cv4CGvqS05m-F4Hg5xU07wIAlm0.wOrkerS.DeV
+  type: vless
+  uuid: 0b3e7958-e5c4-498f-ab21-b49686f95d2d
+  tls: true
+  servername: bold-term-4edd.mbigspot.workers.dev
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /tr/rkSn26veCGpvDy162Z?ed=2560
+    path: /
+    headers:
+      Host: bold-term-4edd.mbigspot.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select

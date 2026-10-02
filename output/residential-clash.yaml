@@ -4,9 +4,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
-  server: 172.64.42.85
-  port: 8080
+- name: 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
+  server: 172.64.154.8
+  port: 2086
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -16,59 +16,23 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
-  server: bff4b219-tmkao0-tnnrly-g43g.hk3.hyhuawei.com
+  server: 117776f2-tmm5c0-ttxkqc-e06r.hk3.hyhuawei.com
   port: 443
   udp: true
   type: hysteria2
-  password: 6ddb6a68-d5f5-ca30-3943-cf0c9876d50c
-  sni: bff4b219-tmkao0-tnnrly-g43g.hk3.hyhuawei.com
+  password: 861726bb-c61a-b0e0-99fa-5ddfdcf21902
+  sni: 117776f2-tmm5c0-ttxkqc-e06r.hk3.hyhuawei.com
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  server: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
+  server: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
   port: 443
   udp: true
   type: hysteria2
-  password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  sni: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
+  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
+  sni: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 04 (家宽) - xiaohe
-  server: 116.204.164.60
-  port: 7443
-  udp: true
-  type: vless
-  uuid: fc85cf23-75e6-4b91-b468-8adc9407047b
-  tls: true
-  servername: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
-- name: 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - xiaohe
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
-  server: 185.115.207.141
-  port: 443
-  udp: true
-  type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  tls: true
-  servername: wzs.echo.net.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HV1ZNVwcHTQsJSgAJVBQUG0dCQEwWAx4AAg4c
-    headers:
-      Host: wzs.echo.net.eu.org
-- name: 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe
-  server: hinet1.2yly.com
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  server: 118.167.235.241
   port: 24215
   udp: true
   type: vless
@@ -77,21 +41,20 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 08 (家宽) - xiaohe
-  server: az-1.linkaa.xyz
-  port: 53110
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 05 (移动家宽) - xiaohe
+  server: 31.77.114.212
+  port: 443
   udp: true
-  type: vmess
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /game/resources
-    headers:
-      Host: az-1.linkaa.xyz
-- name: 🇸🇬 新加坡 (Singapore) 09 (家宽) - xiaohe
+  type: vless
+  uuid: af2bf319-ba88-4fec-8317-2b6a8cee96d1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Zli2oz4Y11pvkrGK71XDcbp1OWIPzK2FYhUXQvl1yiI
+  servername: aken.nightfall.best
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
   server: s3.huhiuh.space
   port: 18642
   udp: true
@@ -99,33 +62,52 @@ proxies:
   password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
   sni: www.bing.com
   skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 07 (家宽) - xiaohe
+  server: 218.250.216.236
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+  tls: true
+  reality-opts:
+    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
+  servername: download.windowsupdate.com
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 08 (家宽) - xiaohe
+  server: 155.117.19.17
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 5fa748137b6d822308eea4611f474ad5
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 04 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 05 (移动家宽) - xiaohe
   - 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 08 (家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 09 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 08 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 04 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 05 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 05 (移动家宽) - xiaohe
   - 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 08 (家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 09 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 08 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -5,34 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  server: bff4b219-tmkao0-tnnrly-g43g.hk3.hyhuawei.com
+  server: 117776f2-tmm5c0-ttxkqc-e06r.hk3.hyhuawei.com
   port: 443
   udp: true
   type: hysteria2
-  password: 6ddb6a68-d5f5-ca30-3943-cf0c9876d50c
-  sni: bff4b219-tmkao0-tnnrly-g43g.hk3.hyhuawei.com
+  password: 861726bb-c61a-b0e0-99fa-5ddfdcf21902
+  sni: 117776f2-tmm5c0-ttxkqc-e06r.hk3.hyhuawei.com
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
-  server: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
+  server: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
   port: 443
   udp: true
   type: hysteria2
-  password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  sni: 9a07c316-tmkao0-u1vxv2-v3c2.nw4.hyhuawei.com
+  password: a305ac08-d136-11ee-b6db-f23c91cfbbc9
+  sni: 8a24f231-tmm5c0-tujecz-1qkeg.nw4.hyhuawei.com
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  server: az-1.linkaa.xyz
-  port: 53110
+  server: 218.250.216.236
+  port: 443
   udp: true
-  type: vmess
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /game/resources
-    headers:
-      Host: az-1.linkaa.xyz
+  type: vless
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+  tls: true
+  reality-opts:
+    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
+  servername: download.windowsupdate.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
