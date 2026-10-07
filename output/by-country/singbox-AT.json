@@ -14,14 +14,22 @@
     {
       "type": "vless",
       "tag": "🇦🇹 奥地利 (Austria) 02 - xiaohe",
-      "server": "31.77.227.6",
-      "server_port": 52006,
-      "uuid": "bc659d88-a1e0-076c-a49a-7b51b26a7a7f",
+      "server": "195.133.88.122",
+      "server_port": 443,
+      "uuid": "5b5e4cbf-2366-499a-8327-0cd9918c687d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "bigdick.gamegrow.ru",
-        "insecure": false
+        "server_name": "music.surfweb.club",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
