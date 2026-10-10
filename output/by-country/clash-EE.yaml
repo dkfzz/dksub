@@ -13,6 +13,19 @@ proxies:
   sni: 109.206.241.10
   skip-cert-verify: true
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
+  server: 185.252.177.216
+  port: 443
+  udp: true
+  type: vless
+  uuid: 616c7b3b-41f4-4038-88c6-d6fedd0ae4a7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs
+    short-id: 9ea74b83f4993ca9
+  servername: est-1.ardesnode.ru
+  client-fingerprint: random
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
   server: 94.183.170.135
   port: 443
   udp: true
@@ -21,7 +34,9 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
+    headers:
+      Host: estproxy4.lockdwn.com
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
   server: 94.183.170.135
   port: 8443
   udp: true
@@ -30,9 +45,9 @@ proxies:
   tls: true
   servername: estproxy4.lockdwn.com
   skip-cert-verify: false
-  client-fingerprint: edge
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
-  server: 194.26.141.148
+  client-fingerprint: chrome
+- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - xiaohe
+  server: 77.72.85.247
   port: 8443
   udp: true
   type: vless
@@ -46,8 +61,8 @@ proxies:
     path: /vpn-wss/fluxor/59011/
     headers:
       Host: fdghyt.com
-- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - xiaohe
-  server: 212.87.190.93
+- name: 🇪🇪 爱沙尼亚 (Estonia) 06 - xiaohe
+  server: 45.133.151.163
   port: 25895
   udp: true
   type: vless
@@ -57,7 +72,7 @@ proxies:
     public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
     short-id: a73f0410d728c823
   servername: www.samsung.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -68,6 +83,7 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 05 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,5 +94,6 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 05 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 06 - xiaohe
 rules:
 - MATCH,PROXIES
