@@ -6,9 +6,9 @@
     {
       "type": "vless",
       "tag": "🇸🇰 斯洛伐克 (Slovakia) 01 - xiaohe",
-      "server": "80.243.228.84",
+      "server": "80.243.228.61",
       "server_port": 2085,
-      "uuid": "84a7add6-dab3-4af4-900b-192e3e338875",
+      "uuid": "8f6f8a4a-b30b-4061-bf5f-646997a6bcc9",
       "transport": {
         "type": "grpc",
         "service_name": "vless"
