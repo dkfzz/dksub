@@ -2190,11 +2190,19 @@ def export_all(unique_nodes, residential, non_residential):
             ob = item["outbound"]
             if not ob:
                 continue
-            links.append(outbound_to_v2ray_link(ob, name))
-            cp = outbound_to_clash(ob, name)
-            if cp:
-                proxies.append(cp)
-            sb_nodes.append(outbound_to_singbox(ob, name))
+            try:
+                link = outbound_to_v2ray_link(ob, name)
+                if link:
+                    links.append(link)
+                cp = outbound_to_clash(ob, name)
+                if cp:
+                    proxies.append(cp)
+                sb = outbound_to_singbox(ob, name)
+                if sb:
+                    sb_nodes.append(sb)
+            except Exception as e:
+                # 单节点转换失败绝不让整个导出崩溃 (数据里有畸形节点时应跳过而非中断)
+                print(f"[!] 导出跳过畸形节点 [{name}] (type={ob.get('type')}): {e}")
         return links, proxies, sb_nodes
 
     # 1) 全量
@@ -2249,13 +2257,24 @@ def export_all(unique_nodes, residential, non_residential):
 
 def export_clash_yaml(clash_proxies, filepath):
     names = [p["name"] for p in clash_proxies]
+    # ★ 安全收缩: 剔除 yaml 无法序列化的值 (非标量/异常类型), 防单个节点字段拖垮整个导出
+    def _safe(v):
+        if isinstance(v, (str, int, float, bool)) or v is None:
+            return v
+        if isinstance(v, (list, tuple)):
+            return [_safe(x) for x in v]
+        if isinstance(v, dict):
+            return {k: _safe(x) for k, x in v.items() if k not in (None, "")}
+        return str(v)  # 其他类型 (如 bytes/set) 一律转字符串兜底
+
+    proxies = [_safe(p) for p in clash_proxies]
     config = {
         "port": 7890,
         "socks-port": 7891,
         "allow-lan": True,
         "mode": "rule",
         "log-level": "info",
-        "proxies": clash_proxies,
+        "proxies": proxies,
         "proxy-groups": [
             {"name": "PROXIES", "type": "select", "proxies": ["AUTO"] + names},
             {"name": "AUTO", "type": "url-test", "url": "https://www.gstatic.com/generate_204",
@@ -2264,7 +2283,14 @@ def export_clash_yaml(clash_proxies, filepath):
         "rules": ["MATCH,PROXIES"],
     }
     with open(filepath, "w", encoding="utf-8") as f:
-        yaml.dump(config, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
+        try:
+            yaml.safe_dump(config, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
+        except Exception as e:
+            # 兜底: 仍失败则降级为无缩进可用的纯文本 (只丢 YAML 结构, 绝不中断主流程)
+            print(f"[!] clash yaml 导出失败 ({filepath}): {e}")
+            f.seek(0)
+            f.truncate()
+            yaml.safe_dump({"proxies": proxies}, f, allow_unicode=True, sort_keys=False)
 
 
 def export_singbox_json(sb_nodes, filepath):
@@ -2279,7 +2305,22 @@ def export_singbox_json(sb_nodes, filepath):
     config = {"log": {"level": "warn"},
               "outbounds": outbounds}
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(config, f, indent=2, ensure_ascii=False)
+        try:
+            json.dump(config, f, indent=2, ensure_ascii=False)
+        except (TypeError, ValueError) as e:
+            # json 序列化失败 (通常是节点里混入 NaN/Infinity/bytes 等非法 JSON 值)
+            print(f"[!] singbox json 导出失败 ({filepath}): {e}")
+            def _json_safe(v):
+                if isinstance(v, float) and (v != v or v in (float("inf"), float("-inf"))):
+                    return None
+                if isinstance(v, (str, int, bool)) or v is None:
+                    return v
+                if isinstance(v, (list, tuple)):
+                    return [_json_safe(x) for x in v]
+                if isinstance(v, dict):
+                    return {k: _json_safe(x) for k, x in v.items() if k not in (None, "")}
+                return str(v)
+            json.dump(_json_safe(config), f, indent=2, ensure_ascii=False)
 
 
 # ═══════════════════════════════════════════N═══════════════════════
@@ -2561,8 +2602,17 @@ def main():
     if not unique_nodes:
         print("[!] 分类后无存活节点 — 保留上次 output")
         return
-    total, res = export_all(unique_nodes, residential, non_residential)
-    update_readme(total, res)
+    try:
+        total, res = export_all(unique_nodes, residential, non_residential)
+        update_readme(total, res)
+    except Exception as e:
+        # 导出阶段兜底: 打印完整 traceback 到日志, 保留旧 output, 绝不静默 exit 1
+        import traceback
+        print("[!!!] 导出阶段发生未捕获异常, 完整 traceback 如下:")
+        traceback.print_exc()
+        print(f"[!!!] 异常摘要: {e}")
+        print("[!] 已保留上次 output, 不会覆盖订阅文件")
+        return
 
 
     # 统计报告
