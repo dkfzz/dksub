@@ -27,14 +27,21 @@
     {
       "type": "hysteria2",
       "tag": "🇦🇺 澳大利亚 (Australia) 02 - xiaohe",
-      "server": "vpn-au-001.fastervpn.world",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "server": "140.238.198.229",
+      "password": "a34f3990b69f44bfa0d32385",
       "tls": {
         "enabled": true,
-        "server_name": "vpn-au-001.fastervpn.world",
+        "server_name": "rmgyvpn.rest",
         "insecure": true
-      }
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "a34f3990b69f44bfa0d32385"
+      },
+      "server_ports": [
+        "20000:30000",
+        "20000:20000"
+      ]
     },
     {
       "type": "hysteria2",
@@ -55,21 +62,14 @@
     {
       "type": "hysteria2",
       "tag": "🇦🇺 澳大利亚 (Australia) 04 - xiaohe",
-      "server": "140.238.198.229",
-      "password": "a34f3990b69f44bfa0d32385",
+      "server": "vpn-au-001.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "rmgyvpn.rest",
+        "server_name": "vpn-au-001.fastervpn.world",
         "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "a34f3990b69f44bfa0d32385"
-      },
-      "server_ports": [
-        "20000:30000",
-        "20000:20000"
-      ]
+      }
     },
     {
       "type": "selector",
