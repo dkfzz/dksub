@@ -17,13 +17,16 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇧🇷 巴西 (Brazil) 02 - xiaohe
-  server: brb.nnpy.org
-  port: 11100
+  server: 147.15.23.247
+  port: 20000
   udp: true
   type: hysteria2
-  password: df8d55f9-fb51-442d-902a-bf8160dc051b
-  sni: brb.nnpy.org
+  password: CyG0RFxMjzs41uQD4OLuHQ==
+  sni: rmgyvpn.rest
   skip-cert-verify: true
+  obfs: salamander
+  obfs-password: CyG0RFxMjzs41uQD4OLuHQ==
+  ports: 20000-30000
 proxy-groups:
 - name: PROXIES
   type: select

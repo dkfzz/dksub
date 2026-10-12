@@ -4,15 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
-      "server": "47.250.84.25",
-      "server_port": 443,
-      "password": "5931134d1cde66bf83a54acdfebe7ab2",
+      "type": "hysteria2",
+      "tag": "🇮🇷 IR 01 - xiaohe",
+      "server": "62.60.248.157",
+      "server_port": 6443,
+      "password": "8b25a466-71a7-4eef-b735-3d7b9901e74c",
       "tls": {
         "enabled": true,
-        "server_name": "moltbot.doctoroyy.net",
-        "insecure": true
+        "server_name": "content-storage.annet.site",
+        "insecure": false
       }
     },
     {
@@ -20,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe"
+        "🇮🇷 IR 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe"
+        "🇮🇷 IR 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
