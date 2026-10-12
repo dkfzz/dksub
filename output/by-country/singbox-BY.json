@@ -16,10 +16,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/vpn-wss/fluxor/59011/",
-        "headers": {
-          "Host": "wss.zazazuza.ru"
-        }
+        "path": "/vpn-wss/fluxor/59011/"
       }
     },
     {
