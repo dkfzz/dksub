@@ -4,15 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
-      "server": "47.250.84.25",
+      "type": "vmess",
+      "tag": "🌐 其他地区 (Other) 01 - xiaohe",
+      "server": "nomino.11hi8itbaf.workers.dev",
       "server_port": 443,
-      "password": "5931134d1cde66bf83a54acdfebe7ab2",
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "47.250.84.25",
-        "insecure": true
+        "server_name": "nomino.11hi8itbaf.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/guanwang.awsno.com/hls/cctv5phd.m3u8"
       }
     },
     {
@@ -20,14 +25,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
