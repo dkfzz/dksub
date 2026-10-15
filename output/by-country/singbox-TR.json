@@ -6,21 +6,21 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-      "server": "78.135.73.47",
+      "server": "85.192.48.142",
       "server_port": 443,
-      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.datadoghq.com",
+        "server_name": "nvidia.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
-          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
-          "short_id": "f46cd3ea3d1eb72d"
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
         }
       }
     },
@@ -35,7 +35,7 @@
         "server_name": "github.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -59,7 +59,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -71,7 +71,28 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 04 - xiaohe",
-      "server": "45.133.151.176",
+      "server": "78.135.73.47",
+      "server_port": 443,
+      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.datadoghq.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
+          "short_id": "f46cd3ea3d1eb72d"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 05 - xiaohe",
+      "server": "tr2.h1cloud.net",
       "server_port": 25375,
       "uuid": "ec572cf0-1337-4c51-b4ec-ff2f538c1f4c",
       "tls": {
@@ -94,8 +115,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 05 - xiaohe",
-      "server": "tr.datanode-internal.net",
+      "tag": "🇹🇷 土耳其 (Turkey) 06 - xiaohe",
+      "server": "201.34.148.44",
       "server_port": 443,
       "uuid": "93996a55-febe-4183-9366-df6cb11a34dd",
       "flow": "xtls-rprx-vision",
@@ -104,7 +125,7 @@
         "server_name": "sun9-38.userapi.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -114,43 +135,28 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 06 - xiaohe",
-      "server": "177.3.208.65",
+      "type": "trojan",
+      "tag": "🇹🇷 土耳其 (Turkey) 07 - xiaohe",
+      "server": "188.114.98.0",
       "server_port": 443,
-      "uuid": "4f34bc04-479c-49ba-91a8-6bb9ed15031c",
+      "password": "e309e031-991e-4656-9934-44d10deb8fd8",
       "tls": {
         "enabled": true,
-        "server_name": "tgmansion.site",
+        "server_name": "nimm.mpd.cc.cd",
         "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/vless-tr"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 07 - xiaohe",
-      "server": "85.192.48.142",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "nvidia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
+        "path": "/0962",
+        "headers": {
+          "Host": "nimm.mpd.cc.cd"
         }
       }
     },
