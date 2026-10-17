@@ -55,7 +55,7 @@ proxies:
     public-key: 0dtXhkhkh-_MBFoGwzdW4PdlJtVX9oswhJZHbUPGCmo
     short-id: 5d7a45ac0ad6adff
   servername: md1.aiage.work
-  client-fingerprint: firefox
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
