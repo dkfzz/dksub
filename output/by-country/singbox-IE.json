@@ -4,22 +4,33 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
-      "server": "13.134.170.98",
-      "server_port": 22222,
-      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+      "server": "34.253.145.77",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
+      "server": "34.245.155.44",
+      "server_port": 443,
+      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e",
+      "transport": {
+        "type": "http"
+      }
     },
     {
       "type": "trojan",
-      "tag": "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe",
       "server": "ie1.dedushka.top",
       "server_port": 443,
       "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
       "tls": {
         "enabled": true,
         "server_name": "ie1.dedushka.top",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -28,7 +39,8 @@
       "outbounds": [
         "auto",
         "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
-        "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe"
+        "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe"
       ]
     },
     {
@@ -36,7 +48,8 @@
       "tag": "auto",
       "outbounds": [
         "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
-        "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe"
+        "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
