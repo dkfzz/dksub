@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  server: 65.109.209.239
-  port: 33477
-  udp: true
-  type: vless
-  uuid: 0a9dfb0b-4fe1-40fe-b74c-0367e666ca96
-- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
-  server: 65.109.209.239
-  port: 30079
-  udp: true
-  type: vless
-  uuid: 0a9dfb0b-4fe1-40fe-b74c-0367e666ca96
-- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -25,19 +13,15 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
-  server: 212.87.222.10
-  port: 8443
+- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
+  server: 2.26.3.75
+  port: 443
   udp: true
-  type: vless
-  uuid: 8afeb33c-b686-43e9-a629-0d98f991ec28
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: f25sygANXTpzdc9YPCwkggwSmm3piA3BluSeHdfG-hg
-  servername: www.nokia.com
-  client-fingerprint: safari
-- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  type: hysteria2
+  password: d5530551-5e9a-4ac5-8539-cee87e38d9e2
+  sni: fi.67chat.ru
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -48,23 +32,8 @@ proxies:
     public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
     short-id: d368b94e275ab080
   servername: www.google.com
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  server: 2.26.3.75
-  port: 443
-  udp: true
-  type: hysteria2
-  password: d5530551-5e9a-4ac5-8539-cee87e38d9e2
-  sni: fi.67chat.ru
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
-  server: fn1s.sublinkplas.ir
-  port: 53731
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QoYjvkIZ7-bMIYfVI9IzRXUx5A1o3kj7
-- name: 🇫🇮 芬兰 (Finland) 08 - xiaohe
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
   server: 31.77.199.147
   port: 4443
   udp: true
@@ -76,7 +45,19 @@ proxies:
     public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
     short-id: 7da2eae792187ab9
   servername: images.unsplash.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  server: 212.87.222.10
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 8afeb33c-b686-43e9-a629-0d98f991ec28
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: f25sygANXTpzdc9YPCwkggwSmm3piA3BluSeHdfG-hg
+  servername: www.nokia.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -87,9 +68,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
   - 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 07 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -100,8 +78,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
   - 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 07 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 08 - xiaohe
 rules:
 - MATCH,PROXIES
