@@ -15,53 +15,29 @@
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 02 - xiaohe",
       "server": "217.30.10.44",
-      "server_port": 9062,
+      "server_port": 9076,
       "method": "aes-256-cfb",
-      "password": "tkhHVxxfM2QErBWe"
+      "password": "S2zDyyPcmZN2h8EC"
     },
     {
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 03 - xiaohe",
-      "server": "217.30.10.44",
-      "server_port": 9099,
-      "method": "aes-256-cfb",
-      "password": "7heRqkPG3hg4UnRm"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 04 - xiaohe",
       "server": "217.30.10.44",
       "server_port": 9006,
       "method": "aes-256-cfb",
       "password": "FAdUvMJUq5vDgKEq"
     },
     {
-      "type": "trojan",
-      "tag": "🇵🇱 波兰 (Poland) 05 - xiaohe",
-      "server": "31.133.0.186",
-      "server_port": 443,
-      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl2.dedushka.top",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇵🇱 波兰 (Poland) 06 - xiaohe",
-      "server": "31.133.0.182",
-      "server_port": 443,
-      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl1.dedushka.top",
-        "insecure": false
-      }
+      "type": "shadowsocks",
+      "tag": "🇵🇱 波兰 (Poland) 04 - xiaohe",
+      "server": "217.30.10.44",
+      "server_port": 9099,
+      "method": "aes-256-cfb",
+      "password": "7heRqkPG3hg4UnRm"
     },
     {
       "type": "hysteria2",
-      "tag": "🇵🇱 波兰 (Poland) 07 - xiaohe",
+      "tag": "🇵🇱 波兰 (Poland) 05 - xiaohe",
       "server": "78.17.128.153",
       "server_port": 35076,
       "password": "b4c8ee9caa74b7ba0a61",
@@ -73,7 +49,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 08 - xiaohe",
+      "tag": "🇵🇱 波兰 (Poland) 06 - xiaohe",
       "server": "82.118.22.161",
       "server_port": 443,
       "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
@@ -83,7 +59,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -93,36 +69,38 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 09 - xiaohe",
-      "server": "site.teslamotor.site",
-      "server_port": 20001,
-      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
-    },
-    {
-      "type": "vmess",
-      "tag": "🇵🇱 波兰 (Poland) 10 - xiaohe",
-      "server": "54.37.131.126",
-      "server_port": 80,
-      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
-        }
+      "type": "trojan",
+      "tag": "🇵🇱 波兰 (Poland) 07 - xiaohe",
+      "server": "31.133.0.182",
+      "server_port": 443,
+      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl1.dedushka.top",
+        "insecure": false
       }
     },
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 11 - xiaohe",
-      "server": "2.26.225.89",
-      "server_port": 8443,
-      "uuid": "51a1fd52-fd88-4905-a976-35e44be28e4b",
+      "type": "trojan",
+      "tag": "🇵🇱 波兰 (Poland) 08 - xiaohe",
+      "server": "31.133.0.186",
+      "server_port": 443,
+      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
       "tls": {
         "enabled": true,
-        "server_name": "pl.flen-vpn.xyz",
+        "server_name": "pl2.dedushka.top",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇵🇱 波兰 (Poland) 09 - xiaohe",
+      "server": "92.118.150.146",
+      "server_port": 443,
+      "password": "Trojan@82164024",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.tronsg.com",
         "insecure": false
       }
     },
@@ -139,9 +117,7 @@
         "🇵🇱 波兰 (Poland) 06 - xiaohe",
         "🇵🇱 波兰 (Poland) 07 - xiaohe",
         "🇵🇱 波兰 (Poland) 08 - xiaohe",
-        "🇵🇱 波兰 (Poland) 09 - xiaohe",
-        "🇵🇱 波兰 (Poland) 10 - xiaohe",
-        "🇵🇱 波兰 (Poland) 11 - xiaohe"
+        "🇵🇱 波兰 (Poland) 09 - xiaohe"
       ]
     },
     {
@@ -156,9 +132,7 @@
         "🇵🇱 波兰 (Poland) 06 - xiaohe",
         "🇵🇱 波兰 (Poland) 07 - xiaohe",
         "🇵🇱 波兰 (Poland) 08 - xiaohe",
-        "🇵🇱 波兰 (Poland) 09 - xiaohe",
-        "🇵🇱 波兰 (Poland) 10 - xiaohe",
-        "🇵🇱 波兰 (Poland) 11 - xiaohe"
+        "🇵🇱 波兰 (Poland) 09 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
