@@ -5,26 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  server: 65.109.209.239
-  port: 16911
-  udp: true
-  type: vmess
-  uuid: c5f59d68-5a26-40b8-a086-2f531e06737c
-  alterId: 0
-  cipher: auto
-- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  tls: true
-  reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  servername: www.google.com
-  client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -33,8 +13,34 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 45.144.234.157
+- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
+  server: 2.26.106.232
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 5a96c1fc-f167-44b9-9020-8f6867537d14
+  tls: true
+  reality-opts:
+    public-key: fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ
+    short-id: 07f508fe5d2355d3
+  servername: finland02.azotvpn.xyz
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
+  server: 31.77.199.147
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
+    short-id: 7da2eae792187ab9
+  servername: images.unsplash.com
+  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
   server: 2.26.3.75
   port: 443
@@ -54,36 +60,58 @@ proxies:
   reality-opts:
     public-key: f25sygANXTpzdc9YPCwkggwSmm3piA3BluSeHdfG-hg
   servername: www.nokia.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
 - name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  server: 31.77.199.147
-  port: 4443
+  server: 95.216.27.15
+  port: 2053
   udp: true
   type: vless
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  flow: xtls-rprx-vision
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   tls: true
   reality-opts:
-    public-key: GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A
-    short-id: 7da2eae792187ab9
-  servername: images.unsplash.com
-  client-fingerprint: chrome
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    short-id: d368b94e275ab080
+  servername: www.google.com
+  client-fingerprint: random
 - name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
-  server: 2.29.101.158
+  server: static.86.39.13.49.clients.your-server.de
   port: 443
   udp: true
   type: vless
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  uuid: 6c688f63-fad4-45d8-a6a1-1e978ed26b8b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: static.75.209.109.65.clients.your-server.de
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 08 - xiaohe
+  server: 168.222.143.254
+  port: 443
+  udp: true
+  type: vless
+  uuid: ebdf87e8-4f75-4b84-94e0-65ce4894993a
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 0adb9638509b
-- name: 🇫🇮 芬兰 (Finland) 08 - xiaohe
+    public-key: 3_Qy1SAtWfbiQbznyhlXxJtqB-5QQ46VF1Uz2h5A7Q4
+    short-id: 2dc17935
+  servername: st.avito.ru
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 09 - xiaohe
+  server: 144.31.34.146
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
+  tls: true
+  servername: fi1.merky.one
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /mky-ws-4f19c8a7
+    headers:
+      Host: fi1.merky.one
+- name: 🇫🇮 芬兰 (Finland) 10 - xiaohe
   server: 8.6.112.0
   port: 443
   udp: true
@@ -92,13 +120,13 @@ proxies:
   tls: true
   servername: fi1.merky.one
   skip-cert-verify: false
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /mky-ws-4f19c8a7
     headers:
       Host: fi1.merky.one
-- name: 🇫🇮 芬兰 (Finland) 09 - xiaohe
+- name: 🇫🇮 芬兰 (Finland) 11 - xiaohe
   server: uk9.998998.best
   port: 443
   udp: true
@@ -127,6 +155,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 07 - xiaohe
   - 🇫🇮 芬兰 (Finland) 08 - xiaohe
   - 🇫🇮 芬兰 (Finland) 09 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 10 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 11 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -141,5 +171,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 07 - xiaohe
   - 🇫🇮 芬兰 (Finland) 08 - xiaohe
   - 🇫🇮 芬兰 (Finland) 09 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 10 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 11 - xiaohe
 rules:
 - MATCH,PROXIES
