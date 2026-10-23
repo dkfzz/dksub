@@ -6,15 +6,10 @@
     {
       "type": "vmess",
       "tag": "🌐 其他地区 (Other) 01 - xiaohe",
-      "server": "172.66.203.67",
-      "server_port": 443,
+      "server": "104.17.147.222",
+      "server_port": 80,
       "uuid": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
       "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "vmess.lbw666.dpdns.org",
-        "insecure": false
-      },
       "transport": {
         "type": "ws",
         "path": "/ws",
