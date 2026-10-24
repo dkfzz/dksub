@@ -7,9 +7,9 @@
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 01 - xiaohe",
       "server": "217.30.10.44",
-      "server_port": 9006,
+      "server_port": 9063,
       "method": "aes-256-cfb",
-      "password": "FAdUvMJUq5vDgKEq"
+      "password": "aQqJbtwFGcCCaeL3"
     },
     {
       "type": "vless",
@@ -23,7 +23,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -35,9 +35,9 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 03 - xiaohe",
-      "server": "edge10.cyrionflare.com",
-      "server_port": 2052,
-      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+      "server": "site.teslamotor.site",
+      "server_port": 20001,
+      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
     },
     {
       "type": "vless",
@@ -51,7 +51,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -61,30 +61,8 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 05 - xiaohe",
-      "server": "site.teslamotor.site",
-      "server_port": 20001,
-      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
-    },
-    {
-      "type": "vmess",
-      "tag": "🇵🇱 波兰 (Poland) 06 - xiaohe",
-      "server": "54.37.131.126",
-      "server_port": 80,
-      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇵🇱 波兰 (Poland) 07 - xiaohe",
+      "tag": "🇵🇱 波兰 (Poland) 05 - xiaohe",
       "server": "scrap.halyvanedorogo.ru",
       "server_port": 35076,
       "password": "b4c8ee9caa74b7ba0a61",
@@ -96,7 +74,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🇵🇱 波兰 (Poland) 08 - xiaohe",
+      "tag": "🇵🇱 波兰 (Poland) 06 - xiaohe",
       "server": "92.118.150.146",
       "server_port": 443,
       "password": "Trojan@82164024",
@@ -120,9 +98,7 @@
         "🇵🇱 波兰 (Poland) 03 - xiaohe",
         "🇵🇱 波兰 (Poland) 04 - xiaohe",
         "🇵🇱 波兰 (Poland) 05 - xiaohe",
-        "🇵🇱 波兰 (Poland) 06 - xiaohe",
-        "🇵🇱 波兰 (Poland) 07 - xiaohe",
-        "🇵🇱 波兰 (Poland) 08 - xiaohe"
+        "🇵🇱 波兰 (Poland) 06 - xiaohe"
       ]
     },
     {
@@ -134,9 +110,7 @@
         "🇵🇱 波兰 (Poland) 03 - xiaohe",
         "🇵🇱 波兰 (Poland) 04 - xiaohe",
         "🇵🇱 波兰 (Poland) 05 - xiaohe",
-        "🇵🇱 波兰 (Poland) 06 - xiaohe",
-        "🇵🇱 波兰 (Poland) 07 - xiaohe",
-        "🇵🇱 波兰 (Poland) 08 - xiaohe"
+        "🇵🇱 波兰 (Poland) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
