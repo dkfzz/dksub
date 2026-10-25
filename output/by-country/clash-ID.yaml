@@ -5,13 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇩 印尼 (Indonesia) 01 - xiaohe
-  server: 202.155.14.134
-  port: 55555
+  server: 188.114.97.6
+  port: 443
   udp: true
-  type: hysteria2
-  password: 78585441-c8b3-40fb-9b94-15edd312fdcf
-  sni: www.bing.com
-  skip-cert-verify: true
+  type: vless
+  uuid: 1246e51a-97cd-4d5c-9842-76dd3420bbe2
+  tls: true
+  servername: investor.fb.com.r3xxe.eu.cc
+  skip-cert-verify: false
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /id-tksi
+    headers:
+      Host: investor.fb.com.r3xxe.eu.cc
 proxy-groups:
 - name: PROXIES
   type: select
