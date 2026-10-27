@@ -5,27 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 190.93.245.148
+  server: www.ubuntuupdates.com
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
+  type: vmess
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.ubuntuupdates.com
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /assignment
+    path: /truth
+    headers:
+      Host: www.ubuntuupdates.com
 - name: 🌐 其他地区 (Other) 02 - xiaohe
-  server: 190.93.245.148
-  port: 443
+  server: 104.16.0.1
+  port: 2052
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
-  skip-cert-verify: false
+  type: vless
+  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
   network: ws
   ws-opts:
-    path: /
+    path: /rain1226
+    headers:
+      Host: eu02.123450908.xyz
 proxy-groups:
 - name: PROXIES
   type: select
