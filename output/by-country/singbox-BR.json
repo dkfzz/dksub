@@ -4,8 +4,24 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇧🇷 巴西 (Brazil) 01 - xiaohe",
+      "server": "216.128.173.124",
+      "server_port": 15040,
+      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
+      "tls": {
+        "enabled": true,
+        "server_name": "br001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇧🇷 巴西 (Brazil) 02 - xiaohe",
       "server": "216.238.104.154",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -17,9 +33,8 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇧🇷 巴西 (Brazil) 02 - xiaohe",
+      "tag": "🇧🇷 巴西 (Brazil) 03 - xiaohe",
       "server": "147.15.108.14",
-      "server_port": 20000,
       "password": "CyG0RFxMjzs41uQD4OLuHQ==",
       "tls": {
         "enabled": true,
@@ -29,7 +44,11 @@
       "obfs": {
         "type": "salamander",
         "password": "CyG0RFxMjzs41uQD4OLuHQ=="
-      }
+      },
+      "server_ports": [
+        "20000:30000",
+        "20000:20000"
+      ]
     },
     {
       "type": "selector",
@@ -37,7 +56,8 @@
       "outbounds": [
         "auto",
         "🇧🇷 巴西 (Brazil) 01 - xiaohe",
-        "🇧🇷 巴西 (Brazil) 02 - xiaohe"
+        "🇧🇷 巴西 (Brazil) 02 - xiaohe",
+        "🇧🇷 巴西 (Brazil) 03 - xiaohe"
       ]
     },
     {
@@ -45,7 +65,8 @@
       "tag": "auto",
       "outbounds": [
         "🇧🇷 巴西 (Brazil) 01 - xiaohe",
-        "🇧🇷 巴西 (Brazil) 02 - xiaohe"
+        "🇧🇷 巴西 (Brazil) 02 - xiaohe",
+        "🇧🇷 巴西 (Brazil) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
