@@ -1,0 +1,54 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
+      "server": "panel.frojbrpibj124.workers.dev",
+      "server_port": 443,
+      "uuid": "230ca1c7-75ab-4837-8bdd-c8d935b31753",
+      "tls": {
+        "enabled": true,
+        "server_name": "panel.frojbrpibj124.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "panel.frojbrpibj124.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
