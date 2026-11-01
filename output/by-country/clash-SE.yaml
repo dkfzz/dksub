@@ -33,14 +33,14 @@ proxies:
   skip-cert-verify: false
 - name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
   server: 179.253.179.109
-  port: 54083
+  port: 54443
   udp: true
   type: vless
   uuid: 0ef03752-c8bf-4482-8710-e563ca4808f9
   tls: true
   servername: 177.3.215.54
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
