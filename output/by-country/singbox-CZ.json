@@ -6,6 +6,20 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
+      "server": "104.16.215.234",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime39.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - xiaohe",
       "server": "195.123.245.241",
       "server_port": 443,
       "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
@@ -26,7 +40,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 02 - xiaohe",
+      "tag": "🇨🇿 捷克 (Czech) 03 - xiaohe",
       "server": "212.102.38.25",
       "server_port": 443,
       "uuid": "b34a52cb-cd52-49a8-9362-b8e97c151d49",
@@ -36,7 +50,7 @@
         "server_name": "udemy.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
@@ -47,7 +61,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 03 - xiaohe",
+      "tag": "🇨🇿 捷克 (Czech) 04 - xiaohe",
       "server": "178.208.89.190",
       "server_port": 443,
       "uuid": "689a62e4-37e7-41de-9e6a-f2a56368c9e2",
@@ -64,7 +78,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 04 - xiaohe",
+      "tag": "🇨🇿 捷克 (Czech) 05 - xiaohe",
       "server": "31.77.13.22",
       "server_port": 2063,
       "uuid": "b18d5990-96eb-4587-a386-7f8ef7591e6a",
@@ -85,14 +99,14 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 05 - xiaohe",
+      "tag": "🇨🇿 捷克 (Czech) 06 - xiaohe",
       "server": "server.slavkiti.monster",
       "server_port": 443,
-      "uuid": "6dfc9149-1ff9-41c3-8563-0ef284381731",
+      "uuid": "13aef2e0-b3fb-4322-a0e9-c10b908ce6b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.tradingview.com",
+        "server_name": "www.techradar.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -100,7 +114,7 @@
         "reality": {
           "enabled": true,
           "public_key": "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk",
-          "short_id": "1374bddeb25d"
+          "short_id": "87f895f23064"
         }
       }
     },
@@ -113,7 +127,8 @@
         "🇨🇿 捷克 (Czech) 02 - xiaohe",
         "🇨🇿 捷克 (Czech) 03 - xiaohe",
         "🇨🇿 捷克 (Czech) 04 - xiaohe",
-        "🇨🇿 捷克 (Czech) 05 - xiaohe"
+        "🇨🇿 捷克 (Czech) 05 - xiaohe",
+        "🇨🇿 捷克 (Czech) 06 - xiaohe"
       ]
     },
     {
@@ -124,7 +139,8 @@
         "🇨🇿 捷克 (Czech) 02 - xiaohe",
         "🇨🇿 捷克 (Czech) 03 - xiaohe",
         "🇨🇿 捷克 (Czech) 04 - xiaohe",
-        "🇨🇿 捷克 (Czech) 05 - xiaohe"
+        "🇨🇿 捷克 (Czech) 05 - xiaohe",
+        "🇨🇿 捷克 (Czech) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
