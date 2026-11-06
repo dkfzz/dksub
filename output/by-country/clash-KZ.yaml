@@ -15,8 +15,10 @@ proxies:
   network: ws
   ws-opts:
     path: /vmess/
+    headers:
+      Host: 3h-kazakhstan1.09vpn.com
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
-  server: 95.57.50.87
+  server: kz1.japancase.site
   port: 443
   udp: true
   type: vless
